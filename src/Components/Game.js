@@ -10,15 +10,6 @@ const Game = () => {
   const [correctAnswer, setCorrectAnswer] = useState([]);
   const [score, setScore] = useState(0);
 
-  /*
-    fetch API and place into array UNEDITED, score init 0 and currentQuestion init 1
-    get 4 random countries and place into another array CORRECT ANSWERS
-    4 buttons (choices) map and filter over array to randomly choose 3 countries not equal to those in CORRECT ANSWERS
-    if button is clicked which contains country object in CORRECT ANSWERS = correct
-      - setTimeOut, show correct and incorrect answers, score++, currentQuestion++ and re-map
-    repeat until (for now) currentQuestion = CORRECT ANSWERS.length (test with 5), setViewState('results')
-  */
-
   useEffect(() => {
     const fetchData = async () => {
       const res = await axios.get(URL);
@@ -76,4 +67,4 @@ const Game = () => {
   )
 }
 
-export default Game
+export default Game;
